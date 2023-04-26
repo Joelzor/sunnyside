@@ -163,7 +163,7 @@ h6 {
 
 .services__detail {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem 8rem 2rem;
 }
 
 .services__heading {
@@ -198,6 +198,67 @@ h6 {
 
 .services__link-underline--red {
   background-color: var(--primary-red);
+}
+
+/* design section */
+.graphic-design {
+  background-image: url("./images/mobile/image-graphic-design.jpg");
+  height: 85vh;
+  object-fit: cover;
+  background-size: cover;
+  background-position: 50% 75%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.photography {
+  background-image: url("./images/mobile/image-photography.jpg");
+  height: 85vh;
+  object-fit: cover;
+  background-size: cover;
+  background-position: 50% 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.design__container {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.graphic-design__heading {
+  color: var(--primary-cyan);
+  font-weight: 900;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.graphic-design__text {
+  color: var(--primary-cyan);
+}
+
+.photography__heading {
+  color: var(--primary-blue);
+  font-weight: 900;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.photography__text {
+  color: var(--primary-blue);
+}
+
+@media (min-width: 484px) {
+  .graphic-design {
+    background-position: 50% 50%;
+  }
+
+  .photography {
+    background-position: 50% 40%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -269,10 +330,26 @@ h6 {
     margin: -10px 0;
     width: 8rem;
   }
+
+  /* design section */
+  .graphic-design {
+    background-image: url("./images/desktop/image-graphic-design.jpg");
+    width: 50%;
+  }
+
+  .photography {
+    background-image: url("./images/desktop/image-photography.jpg");
+    width: 50%;
+  }
 }
 
 @media (min-width: 1048px) {
   .services__detail {
     padding: 0 7rem;
+  }
+
+  .design__container {
+    text-align: center;
+    padding: 4rem 8rem;
   }
 }
