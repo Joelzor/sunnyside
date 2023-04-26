@@ -111,6 +111,17 @@ h6 {
   max-width: 1270px;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-column {
+  flex-direction: column-reverse;
+}
+
+/* HEADER / NAVBAR */
+
 .header {
   background-image: url("./images/mobile/image-header.jpg");
   object-fit: cover;
@@ -148,7 +159,54 @@ h6 {
   font-size: 1.3rem;
 }
 
+/* services section */
+
+.services__detail {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.services__heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.services__text {
+  color: var(--neutral-grey-blue-dark);
+  margin-bottom: 3rem;
+}
+
+.services__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-family: var(--font-headings);
+}
+
+.services__link-underline {
+  height: 0.75rem;
+  width: 9rem;
+  opacity: 0.4;
+  border-radius: 12px;
+  margin: -10px auto;
+}
+
+.services__link-underline--yellow {
+  background-color: var(--primary-yellow);
+}
+
+.services__link-underline--red {
+  background-color: var(--primary-red);
+}
+
 @media (min-width: 768px) {
+  /* general */
+  .column {
+    flex-direction: row;
+  }
+
+  /* HEADER / NAVBAR */
   .header {
     background-image: url("./images/desktop/image-header.jpg");
     background-position: 50% 60%;
@@ -164,13 +222,15 @@ h6 {
     list-style: none;
   }
 
-  .navbar__link:link {
+  .navbar__link:link,
+  .navbar__link:visited {
     text-decoration: none;
     color: var(--white);
     text-transform: capitalize;
   }
 
-  .navbar__contact-btn:link {
+  .navbar__contact-btn:link,
+  .navbar__contact-btn:visited {
     text-decoration: none;
     text-transform: uppercase;
     background-color: var(--white);
@@ -189,5 +249,30 @@ h6 {
   .header__title-container {
     font-size: 2rem;
     gap: 5rem;
+  }
+
+  /* services section */
+  .services__detail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .services__image {
+    width: 50%;
+  }
+
+  .services__link-underline {
+    margin: -10px 0;
+    width: 8rem;
+  }
+}
+
+@media (min-width: 1048px) {
+  .services__detail {
+    padding: 0 7rem;
   }
 }
