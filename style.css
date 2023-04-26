@@ -1,0 +1,193 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --primary-red: #fe7867;
+  --primary-yellow: #fad400;
+
+  --primary-blue: #19536b;
+  --primary-cyan: #25564b;
+  --secondary-cyan: #458c7e;
+
+  --neutral-blue: #23303e;
+  --neutral-grey-blue-very-dark: #5a636c;
+  --neutral-grey-blue-dark: #818498;
+  --neutral-grey-blue: #a7abae;
+  --white: #ffffff;
+
+  --font-headings: "Fraunces", serif;
+  --font-body: "Barlow", sans-serif;
+  --font-weight-body: 600;
+  --font-weight-heading: 700;
+  --font-size-body: 18px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
+  font-size: var(--font-size-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-headings);
+  font-weight: var(--font-weight-heading);
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1270px;
+}
+
+.header {
+  background-image: url("./images/mobile/image-header.jpg");
+  object-fit: cover;
+  height: 100vh;
+  background-position: 50% 85%;
+  background-size: cover;
+}
+
+.navbar {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__menu-icon {
+  cursor: pointer;
+}
+
+.navbar__links {
+  display: none;
+}
+
+.header__title-container {
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+  font-size: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-image: url("./images/desktop/image-header.jpg");
+    background-position: 50% 60%;
+  }
+
+  .navbar__menu-icon {
+    display: none;
+  }
+
+  .navbar__links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+  }
+
+  .navbar__link:link {
+    text-decoration: none;
+    color: var(--white);
+    text-transform: capitalize;
+  }
+
+  .navbar__contact-btn:link {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--white);
+    color: black;
+    font-family: var(--font-headings);
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    transition: all 300ms;
+  }
+
+  .navbar__contact-btn:hover {
+    color: var(--white);
+    background-color: #77d2ff;
+  }
+
+  .header__title-container {
+    font-size: 2rem;
+    gap: 5rem;
+  }
+}
