@@ -295,6 +295,16 @@ h6 {
   color: var(--neutral-grey-blue);
 }
 
+/* gallery section */
+.gallery__mobile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gallery__desktop {
+  display: none;
+}
+
 @media (min-width: 484px) {
   .graphic-design {
     background-position: 50% 50%;
@@ -384,6 +394,15 @@ h6 {
   .photography {
     background-image: url("./images/desktop/image-photography.jpg");
     width: 50%;
+  }
+
+  .gallery__mobile {
+    display: none;
+  }
+
+  .gallery__desktop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
