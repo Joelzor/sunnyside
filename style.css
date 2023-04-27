@@ -275,6 +275,24 @@ h6 {
   height: auto;
   border-radius: 50%;
   margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.testimonials__text {
+  color: var(--neutral-grey-blue-very-dark);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.testimonials__name {
+  font-family: var(--font-headings);
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+}
+
+.testimonials__job {
+  font-size: 0.9rem;
+  color: var(--neutral-grey-blue);
 }
 
 @media (min-width: 484px) {
